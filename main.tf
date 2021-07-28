@@ -1,10 +1,11 @@
 provider "aws" {
-  region = var.region
+  profile = var.profile
+  region  = var.region
 }
 
-module "aws_ec2_with_local_key" {
-  source            = "./modules/aws_ec2_with_local_key"
-  public_key        = var.public_key
+module "aws_ec2_with_named_key" {
+  source            = "./modules/aws_ec2_with_named_key"
+  public_key_name   = var.public_key_name
   ec2_instance_type = "t2.micro"
   user_data         = file("./install-packages.sh")
 }

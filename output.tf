@@ -1,9 +1,9 @@
 output "ec2_hostname" {
-  value = module.aws_ec2_with_local_key.ec2_hostname
+  value = module.aws_ec2_with_named_key.ec2_hostname
 }
 
 output "ec2_hostip" {
-  value = module.aws_ec2_with_local_key.ec2_hostip
+  value = module.aws_ec2_with_named_key.ec2_hostip
 }
 
 
